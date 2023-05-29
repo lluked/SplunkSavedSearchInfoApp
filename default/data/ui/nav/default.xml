@@ -1,0 +1,6 @@
+<nav>
+  <view name="savedsearch_info" default='true'/>
+  <view name="signature_coverage" default='true'/>
+  <view name="mitre_heatmap" default='true'/>
+  <view name="dashboards" />
+</nav>

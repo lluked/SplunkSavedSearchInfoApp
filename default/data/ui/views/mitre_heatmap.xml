@@ -1,0 +1,23 @@
+<dashboard version="1.1" theme="dark">
+  <label>MITRE Heatmap</label>
+  <row>
+    <panel>
+      <viz type="mitre_attck_heatmap.mitre_attck_heatmap">
+        <search>
+          <query>| inputlookup SavedSearchesInfo-SignatureLookup 
+`SavedSearchesInfo-ExpandAnnotations`
+| stats count by mitre_attack</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.animate">yes</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.hideNull">no</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.showSubTechniques">no</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.sortKey">data-name</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.sortOrder">desc</option>
+        <option name="mitre_attck_heatmap.mitre_attck_heatmap.theme">dark</option>
+      </viz>
+    </panel>
+  </row>
+</dashboard>
