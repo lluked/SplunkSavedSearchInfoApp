@@ -5,7 +5,8 @@
       <viz type="mitre_attck_heatmap.mitre_attck_heatmap">
         <search>
           <query>| inputlookup SavedSearchesInfo-SignatureLookup 
-`SavedSearchesInfo-ExpandAnnotations`
+| search enabled = 1 
+`SavedSearchesInfo-ExpandAnnotations` 
 | stats count by mitre_attack</query>
           <earliest>-24h@h</earliest>
           <latest>now</latest>
